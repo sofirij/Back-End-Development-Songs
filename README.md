@@ -17,7 +17,10 @@ creating, reading, updating, and deleting song resources, accessed through
 | Health | GET    | 200 OK           | `""`                         | `/health`      |
 | Count  | GET    | 200 OK           | `""`                         | `/count`       |
 
-## Local Setup
+## Environment Setup
+
+This repository was created from the `nyu-devops/lab-flask-tdd` template and
+configured as follows:
 
 1. Clone this repository and change into its directory:
 
@@ -26,7 +29,35 @@ creating, reading, updating, and deleting song resources, accessed through
    cd Back-End-Development-Songs
    ```
 
-2. Install dependencies:
+2. Run the environment setup script:
+
+   ```bash
+   bin/setup.sh
+   ```
+
+   This installs Python 3.9.x, creates a Python virtual environment named
+   `backend-songs-venv`, and installs all of the project dependencies. The
+   script completed successfully, and the developer environment was
+   verified with:
+
+   ```bash
+   python3.9 --version
+   # Python 3.9.x
+   ```
+
+3. Exit and reopen the terminal (or run `exit`) so that the new shell
+   activates the `backend-songs-venv` virtual environment automatically.
+
+## Local Setup
+
+1. Activate the virtual environment (if not already active):
+
+   ```bash
+   source ~/backend-songs-venv/bin/activate
+   ```
+
+2. Install dependencies (already handled by `bin/setup.sh`, but can be
+   re-run manually):
 
    ```bash
    pip install -r requirements.txt

@@ -1,0 +1,9 @@
+$ curl -i --request GET --url http://localhost:5000/health
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.8 Python/3.14.3
+Date: Wed, 23 Sep 2026 19:28:45 GMT
+Content-Type: application/json
+Content-Length: 16
+Connection: close
+
+{"status":"OK"}
